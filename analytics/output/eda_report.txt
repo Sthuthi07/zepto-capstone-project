@@ -1,0 +1,49 @@
+Missing percentages:
+age            19.865320
+embarked        0.224467
+deck           77.216611
+embark_town     0.224467
+
+Age IQR outliers: 65
+Fare IQR outliers: 114
+Fare mean=32.0967, median=14.4542, mode=8.0500
+Fare ordering interpretation: right-skewed
+
+Survival by sex:
+sex
+female    0.740385
+male      0.188908
+
+Survival by pclass:
+pclass
+1    0.626168
+2    0.472826
+3    0.242363
+
+Survival by sex and pclass:
+sex     pclass
+female  1         0.967391
+        2         0.921053
+        3         0.500000
+male    1         0.368852
+        2         0.157407
+        3         0.135447
+
+Correlation:
+          survived    pclass       age     sibsp     parch      fare
+survived  1.000000 -0.335549 -0.069822 -0.034040  0.083151  0.255290
+pclass   -0.335549  1.000000 -0.336512  0.081656  0.016824 -0.548193
+age      -0.069822 -0.336512  1.000000 -0.232543 -0.171485  0.093707
+sibsp    -0.034040  0.081656 -0.232543  1.000000  0.414542  0.160887
+parch     0.083151  0.016824 -0.171485  0.414542  1.000000  0.217532
+fare      0.255290 -0.548193  0.093707  0.160887  0.217532  1.000000
+
+Two strongest absolute correlations: [(np.float64(0.5481932852366449), 'pclass', 'fare', np.float64(-0.5481932852366449)), (np.float64(0.4145416380997264), 'sibsp', 'parch', np.float64(0.4145416380997264))]
+
+Chart interpretations:
+1. Age histogram: Age is concentrated among young and middle-aged passengers, with fewer observations at the extremes.
+2. Fare histogram: Fare is strongly concentrated at lower values with a long upper tail, consistent with the mean exceeding the median.
+3. Survival by sex: Survival rates differ substantially by sex, showing sex is informative for the target.
+4. Survival by class: Passenger class is associated with survival, indicating socioeconomic/class position relates to outcome.
+5. Fare by class and survival: Fare varies strongly by class, while survivors tend to appear more frequently among higher-fare observations within classes.
+6. Correlation heatmap: The matrix shows relationships among the six required numeric features; the two strongest pairs are listed above.

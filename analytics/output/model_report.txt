@@ -1,0 +1,21 @@
+Classification metrics:
+              Model  Accuracy  Precision   Recall       F1      AUC
+Logistic Regression  0.804469   0.793103 0.666667 0.724409 0.843742
+      Decision Tree  0.765363   0.754717 0.579710 0.655738 0.797101
+      Random Forest  0.815642   0.800000 0.695652 0.744186 0.830040
+
+Imbalance comparison:
+             Strategy  Precision   Recall       F1
+             baseline   0.800000 0.695652 0.744186
+class_weight_balanced   0.750000 0.739130 0.744526
+     SMOTE_train_only   0.761194 0.739130 0.750000
+
+GridSearch best parameters:
+{'model__max_depth': 5, 'model__max_features': 'sqrt', 'model__n_estimators': 100}
+OOB score: 0.827247191011236
+
+Regression metrics: {'MAE': 20.897717925140867, 'RMSE': np.float64(30.532802561398345), 'R2': 0.39754802380221577, 'Adjusted_R2': 0.36168778712377625, 'Heteroscedasticity_indication': True}
+
+
+Final recommendation:
+Based on the held-out test metrics, the classifier with the highest F1 in this run is Random Forest (F1=0.744, precision=0.800, recall=0.696, AUC=0.830). Accuracy was 0.816. This choice emphasizes the observed balance between precision and recall rather than accuracy alone. The regression task is reported separately because regression metrics are not directly comparable with classification metrics.
