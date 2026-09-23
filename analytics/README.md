@@ -38,3 +38,13 @@ Random Forest tuning uses GridSearchCV over `n_estimators`, `max_depth`, and `ma
 The regression side-task predicts fare from the other available features and reports MAE, RMSE, R² and adjusted R². The residual plot is inspected and a spread-based heteroscedasticity indication is recorded.
 
 The complete fitted Random Forest pipeline, including preprocessing and estimator, is saved as `models/best_random_forest_pipeline.joblib` and reloaded by `verify_model.py`.
+
+## Final verification
+
+The three project modules were executed locally after dependency installation:
+
+- Data pipeline: scraping, cleaning, SQLite loading, SQL queries, and pandas/SQL join validation.
+- Analytics: EDA, classification, imbalance comparison, regression, evaluation metrics, and saved model pipeline.
+- Support assistant: document ingestion, retrieval, deterministic mock responses, FastAPI endpoint, and Docker configuration.
+
+The analytics module also includes `analytics/titanic.csv` as the committed offline fallback dataset.
